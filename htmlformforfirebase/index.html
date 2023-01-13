@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin for Extension</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Add</span> Your Coupon</h1>
+    <div class="wrapper">
+      <div class="company-info">
+       
+       
+      </div>
+      <div class="contact">
+        <h3>Add Coupon</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Coupon Code</label>
+            <input type="text" name="code" id="code" required>
+          </p>
+          <p>
+            <label>Provider Name</label>
+            <input type="text" name="name" id="name">
+          </p>
+         
+          <p>
+            <label>Start Date</label>
+            <input type="date" name="start" id="start" required>
+          </p>
+          <p>
+            <label>End Date</label>
+            <input type="date" name="end" id="end">
+          </p>
+          enable
+          <input type="text" id="ena" value="true" />
+          <p class="full">
+            <label>Description</label>
+            <textarea name="description" rows="5" id="description"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
