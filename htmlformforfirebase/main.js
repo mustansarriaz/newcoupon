@@ -54,7 +54,12 @@ function getInputVal(id){
 
 // Save message to firebase
 function saveMessage(code, name,start, end,live, description){
-  var newMessageRef = messagesRef.push();
+  
+  // ensure name is the exact same format as we are using in the extension e.g
+  const domain = name.replace('http://', '').replace('https://', '').replace('www.','').split(/[/?#]/)[0];
+  const enc_domain = btoa(domain);
+  const domainRef = messagesRef.child(enc_domain);
+  var newMessageRef = domainRef.push();
   newMessageRef.set({
     code: code,
     name: name,
